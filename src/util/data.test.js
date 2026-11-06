@@ -17,7 +17,11 @@ import { generateReportData } from "../data.js"; // Adjust this relative path to
 describe("generateReportData()", () => {
   test("should execute logFn if provided", () => {
     const logger = vi.fn(() => {});
-    
+
+    // logger.mockImplementationOnce(()=> {
+
+    // })
+
     generateReportData(logger);
 
     // Fixed typo: tobeCalled -> toHaveBeenCalled

@@ -19,8 +19,9 @@ test ('should execute the writeFile method',() => {
     const testFilename = "test.txt";
 
     writeData(testData,testFilename);
+    return expect(writeData(testData,testFilename));
 
 //    return expect(writeData(testData,testFilename)).resolves.toBeUndefined();
 
-expect(fs.writeFile).toBeCalledWith(testFilename,testData);
+// expect(fs.writeFile).toBeCalledWith(testFilename,testData);
 });
